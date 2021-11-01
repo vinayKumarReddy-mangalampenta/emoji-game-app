@@ -30,14 +30,13 @@ class EmojiGame extends Component {
   }
 
   clickToGetPoint = id => {
-    const {emojiCardIds, score} = this.state
+    const {emojiCardIds} = this.state
 
     const arrLen = emojiCardIds.filter(each => each !== id)
 
     if (arrLen.length !== emojiCardIds.length) {
       this.setState(prevState => ({
         isGameOver: true,
-        topScore: prevState.topScore > score ? prevState.score : score,
         isScoreNeed: !prevState.isScoreNeed,
       }))
     } else {
@@ -49,15 +48,14 @@ class EmojiGame extends Component {
   }
 
   replayGame = () => {
-    const {score, topScore} = this.state
-
-    const newTopScore = topScore > score ? topScore : score
-
     this.setState(prevState => ({
       isGameOver: false,
       score: 0,
       emojiCardIds: [],
-      topScore: newTopScore,
+      topScore:
+        prevState.topScore > prevState.score
+          ? prevState.topScore
+          : prevState.score,
       isScoreNeed: !prevState.isScoreNeed,
     }))
   }
