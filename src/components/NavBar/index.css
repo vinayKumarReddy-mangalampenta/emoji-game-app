@@ -1,0 +1,41 @@
+/* Write your code here. */
+.nav-bar {
+  box-shadow: 0px 0px 20px 0 #9796f0;
+  background-color: #ffffff33;
+  padding: 8px;
+  display: flex;
+  flex-direction: row;
+  color: white;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.score-con {
+  display: flex;
+  margin-left: auto;
+  justify-content: space-around;
+  color: white;
+  margin-right: 30px;
+}
+.score-con > p {
+  margin-right: 20px;
+  font-weight: bold;
+  font-size: 26px;
+}
+
+@media screen and (max-width: 767px) {
+  .score-con {
+    margin-right: 10px;
+  }
+  .score-con > p {
+    margin-right: 4px;
+    font-weight: bold;
+    font-size: 16px;
+  }
+  .logo {
+    width: 30px;
+  }
+  h1 {
+    font-size: 15px;
+  }
+}

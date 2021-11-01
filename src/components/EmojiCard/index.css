@@ -1,0 +1,66 @@
+.emoji-con {
+  list-style-type: none;
+}
+.emoji-button {
+  background-color: transparent;
+  outline: none;
+  border: 0;
+  cursor: pointer;
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+  background-color: hsla(0, 0%, 100%, 0.2);
+  width: 200px;
+  height: 200px;
+  border: 3px solid hsla(0, 0%, 100%, 0.18823529411764706);
+  border-radius: 24px;
+  margin: 18px;
+}
+
+@media screen and (max-width: 767px) {
+  .emoji-button {
+    background-color: transparent;
+    outline: none;
+    border: 0;
+    cursor: pointer;
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+    background-color: hsla(0, 0%, 100%, 0.2);
+
+    border: 3px solid hsla(0, 0%, 100%, 0.18823529411764706);
+    border-radius: 10px;
+    margin: 5px;
+    width: 65px;
+    height: 65px;
+  }
+  .emoji {
+    width: 45px;
+    height: 45px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .emoji-button {
+    width: 120px;
+    height: 120px;
+  }
+  .emoji {
+    width: 70px;
+    height: 70px;
+  }
+}
+
+@media screen and (min-width: 576px) and (max-width: 767px) {
+  .emoji-button {
+    width: 90px;
+    height: 90px;
+  }
+  .emoji {
+    width: 60px;
+    height: 60px;
+  }
+}
